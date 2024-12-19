@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halloween Countdown - Spooky College</title>
+    <link rel="stylesheet" href="time.css">
+    <script>
+        // Countdown function for Halloween
+        function countdown() {
+            const halloweenDate = new Date("Oct 31, 2024 00:00:00").getTime();
+            const now = new Date().getTime();
+            const timeRemaining = halloweenDate - now;
+
+            // Time calculations for days, hours, minutes, and seconds
+            const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+            // Display the result in the elements with ids
+            document.getElementById("days").innerHTML = days;
+            document.getElementById("hours").innerHTML = hours;
+            document.getElementById("minutes").innerHTML = minutes;
+            document.getElementById("seconds").innerHTML = seconds;
+
+            // If the countdown is finished
+            if (timeRemaining < 0) {
+                document.getElementById("countdown").innerHTML = "🎃 It's Halloween! Time for spooky fun! 👻";
+            }
+        }
+
+        // Update the countdown every 1 second
+        setInterval(countdown, 1000);
+    </script>
+</head>
+<body>
+    <!-- Countdown Container -->
+    <div class="countdown-container">
+        <h1>🎃 Countdown to Halloween 🎃</h1>
+        <p class="greeting">Dayananda sagar university  is counting down to the most haunted day of the year! Prepare yourself...</p>
+        
+        <!-- Countdown Timer -->
+        <div id="countdown" class="countdown-timer">
+            <div class="countdown-item">
+                <span id="days">0</span>
+                <p>Days</p>
+            </div>
+            <div class="countdown-item">
+                <span id="hours">0</span>
+                <p>Hours</p>
+            </div>
+            <div class="countdown-item">
+                <span id="minutes">0</span>
+                <p>Minutes</p>
+            </div>
+            <div class="countdown-item">
+                <span id="seconds">0</span>
+                <p>Seconds</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <img src="dsu.jpg" alt="" width="150">
+        <p>&copy; 2024 Spooky College | Get ready for tricks and treats!</p>
+    </footer>
+</body>
+</html>

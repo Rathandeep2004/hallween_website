@@ -1,0 +1,113 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Creepster', sans-serif;
+    background-color: #111;
+    color: #f8f3d4;
+}
+
+nav {
+    background-color: #e25822;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    text-shadow: 2px 2px 5px black;
+}
+
+.hero {
+    background-image: url('https://www.transparenttextures.com/patterns/dark-mosaic.png');
+    background-color: black;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 4em;
+    text-shadow: 4px 4px 6px black;
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    margin: 20px 0;
+}
+
+.apply-btn {
+    background-color: #e25822;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.apply-btn:hover {
+    background-color: #d1401f;
+    transform: scale(1.1);
+}
+
+.main-content {
+    padding: 50px 10%;
+}
+
+.about, .announcements, .events {
+    margin-bottom: 50px;
+}
+
+.about h2, .announcements h2, .events h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.announcements ul {
+    list-style: none;
+    padding: 0;
+}
+
+.announcements ul li {
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+
+.event {
+    margin-bottom: 20px;
+}
+
+.event h3 {
+    font-size: 1.5em;
+}
+
+footer {
+    background-color: #e25822;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}

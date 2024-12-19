@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spooky Halloween</title>
+    <style>
+        /* Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+        /* Base styling */
+        body {
+            font-family: 'Creepster', cursive;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(180deg, #0a0a0a 0%, #1c1c1c 100%);
+            color: #f39c12;
+            overflow-x: hidden;
+            background-image: url('fog.png'); /* Add a foggy background image */
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        header {
+            background-color: #8b0000; /* Dark red for a sinister look */
+            padding: 20px;
+            text-align: center;
+            font-size: 2.5em;
+            color: white;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+            animation: flicker 2s infinite;
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #333;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        nav a {
+            color: #f39c12;
+            text-decoration: none;
+            font-size: 1.3em;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        nav a:hover {
+            color: #fff;
+            transform: scale(1.1);
+            text-shadow: 0 0 10px #f1c40f, 0 0 20px #e67e22;
+        }
+
+        .container {
+            padding: 40px;
+            text-align: center;
+        }
+        .container img {
+            width: 100%;
+            max-width: 400px;
+            animation: float 6s ease-in-out infinite;
+        }
+        .container h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #e74c3c;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+        }
+
+        .spooky-facts {
+            background-color: #2c3e50;
+            padding: 30px;
+            margin-top: 20px;
+            border-radius: 15px;
+            animation: fadeIn 2s ease;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Animations */
+        @keyframes flicker {
+            0%, 18%, 22%, 25%, 53%, 57%, 100% {
+                opacity: 1;
+            }
+            20%, 24%, 55% {
+                opacity: 0.4;
+            }
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fly {
+            0% {
+                transform: translateX(100vw) scale(0.5);
+            }
+            50% {
+                transform: translateX(-50vw) scale(1);
+            }
+            100% {
+                transform: translateX(-150vw) scale(0.5);
+            }
+        }
+
+        /* Flying bats */
+        .bat {
+            position: absolute;
+            top: 20%;
+            left: 100vw;
+            width: 60px;
+            height: auto;
+            background-image: url('bat.png'); /* Replace with your local image */
+            background-size: cover;
+            background-position: center;
+            animation: fly 12s linear infinite;
+        }
+
+        .bat:nth-child(2) {
+            top: 30%;
+            animation-delay: 2s;
+            animation-duration: 10s;
+        }
+
+        .bat:nth-child(3) {
+            top: 50%;
+            animation-delay: 4s;
+            animation-duration: 15s;
+        }
+
+        /* Spooky glowing effect for hovering elements */
+        nav a:hover {
+            color: #f1c40f;
+            text-shadow: 0 0 10px #f1c40f, 0 0 20px #f1c40f, 0 0 30px #e67e22;
+        }
+
+        /* Spooky floating text effect */
+        .floating-text {
+            font-size: 3em;
+            color: #e74c3c;
+            animation: flickerText 2s infinite alternate, float 5s infinite ease-in-out;
+            position: relative;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+        }
+
+        @keyframes flickerText {
+            0% {
+                text-shadow: 0 0 5px #ffb74d, 0 0 10px #e67e22, 0 0 20px #e67e22;
+            }
+            50% {
+                text-shadow: none;
+            }
+            100% {
+                text-shadow: 0 0 5px #ffb74d, 0 0 10px #e67e22, 0 0 20px #e67e22;
+            }
+        }
+
+        /* Floating Ghosts */
+        .ghost {
+            position: absolute;
+            width: 100px;
+            height: auto;
+            background-image: url('ghost.png'); /* Replace with your local ghost image */
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: 0.7;
+            animation: floatGhost 10s linear infinite;
+        }
+
+        .ghost:nth-child(1) {
+            top: 60%;
+            left: -100px;
+            animation-duration: 12s;
+            animation-delay: 1s;
+        }
+
+        .ghost:nth-child(2) {
+            top: 80%;
+            left: 110%;
+            animation-duration: 14s;
+            animation-delay: 3s;
+        }
+
+        @keyframes floatGhost {
+            0% {
+                transform: translateX(110vw) translateY(0) scale(0.8);
+            }
+            50% {
+                transform: translateX(-50vw) translateY(-20px) scale(1.2);
+            }
+            100% {
+                transform: translateX(-110vw) translateY(0) scale(0.8);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        Welcome to the Spooky Halloween!
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#history">History of Halloween</a>
+        <a href="#costumes">Costumes</a>
+        <a href="#haunted">Haunted Places</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container" id="home">
+        <h2 class="floating-text">Halloween Night is Coming...</h2>
+        <img src="spooky-pumpkin.jpg" alt="Spooky Pumpkin"> <!-- Replace with your local image -->
+        <p>Get ready for the most eerie night of the year, where ghouls, goblins, and witches take to the streets. Prepare your costume and brace yourself for scares and sweets!</p>
+
+        <!-- Bats flying across the screen -->
+        <div class="bat bat1"></div>
+        <div class="bat bat2"></div>
+        <div class="bat bat3"></div>
+
+        <!-- Floating ghosts -->
+        <div class="ghost ghost1"></div>
+        <div class="ghost ghost2"></div>
+    </div>
+
+    <div class="container spooky-facts" id="history">
+        <h2>The History of Halloween</h2>
+        <p>Halloween's origins date back to the ancient Celtic festival of Samhain. The Celts, who lived 2,000 years ago, celebrated their new year on November 1. This day marked the end of summer and the harvest and the beginning of the dark, cold winter, a time of year that was often associated with

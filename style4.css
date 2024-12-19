@@ -1,0 +1,92 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Creepster', sans-serif;
+    background-color: #111;
+    color: #f8f3d4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('https://www.transparenttextures.com/patterns/dark-mosaic.png');
+}
+
+/* Registration Container */
+.registration-container {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 10px #e25822;
+    width: 80%;
+    max-width: 600px;
+}
+
+.registration-container h1 {
+    font-size: 3em;
+    color: #e25822;
+    text-shadow: 4px 4px 6px black;
+}
+
+.greeting {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+}
+
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.1em;
+    border: 2px solid #e25822;
+    border-radius: 5px;
+    background-color: #222;
+    color: #f8f3d4;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #ff6a00;
+}
+
+.register-btn {
+    background-color: #e25822;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 3px 3px 10px black;
+}
+
+.register-btn:hover {
+    background-color: #d1401f;
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    margin-top: 30px;
+    color: white;
+    text-align: center;
+}
