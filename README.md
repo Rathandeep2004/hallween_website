@@ -19,8 +19,8 @@ This repository contains the source code for a creepy-fun university webpage fil
 
 ## 🧟 How to Use
 1. Clone this repository (if you dare):
-   ```bash
- https://github.com/Rathandeep2004/hallween_website.git
+   ```
+   bash https://github.com/Rathandeep2004/hallween_website.git
    ```
 2. Open `index.html` in your favorite web browser.
 3. Explore... and beware! 😨
